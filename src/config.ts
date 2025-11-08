@@ -21,7 +21,7 @@ const WEBSITE_SORTS: WebsiteSort[] = [
       {
         title: "Monitor2",
         description: "服务监控2号",
-        url: "https://uptimer.trageek.com",
+        url: "https://uptimer.trageek.com/status/idkbungle",
       },
     ],
   },
