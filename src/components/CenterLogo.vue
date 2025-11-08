@@ -76,7 +76,12 @@ onMounted(() => {
       />
       <div :class="['hello', { hello_bottom: touchable }]">
         <div>{{ slogan }}</div>
-        <div class="hello_bottom_text">点击以访问 {{ $config.BLOG_NAME }}</div>
+        <div class="hello_bottom_text">
+          <a href="https://blog.trageek.com" target="_blank" rel="noopener" @click.stop>Click to visit JackLee-Blog</a>
+        </div>
+        <div class="hello_bottom_text">
+          <a href="https://monitor.trageek.com" target="_blank" rel="noopener" @click.stop>Click to see site status-monitoring page</a>
+        </div>
       </div>
     </div>
   </div>

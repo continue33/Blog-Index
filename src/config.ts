@@ -1,48 +1,242 @@
 /** Website 分类配置 */
 const WEBSITE_SORTS: WebsiteSort[] = [
   {
-    title: "示例分类1",
+    title: "General",
     sites: [
       {
-        title: "主标题",
-        url: "http://www.your-web-page.com/",
-        icon: "",
-        color: "#0171CD",
+        title: "Blog1",
+        description: "博客主站",
+        url: "https://blog.trageek.com",
       },
       {
-        title: "主标题",
-        description: "网站描述",
-        url: "http://www.your-web-page.com/",
-        icon: "",
+        title: "Blog2",
+        description: "博客备用站点",
+        url: "https://blog.itvoyager.us",
       },
       {
-        title: "主标题",
-        description: "网站描述",
-        url: "http://www.your-web-page.com/",
-        icon: "",
+        title: "Monitor1",
+        description: "服务监控1号",
+        url: "https://monitor.itvoyager.us",
+      },
+      {
+        title: "Monitor2",
+        description: "服务监控2号",
+        url: "https://uptimer.trageek.com",
       },
     ],
   },
   {
-    title: "示例分类2",
-  },
-  {
-    title: "示例分类3",
-  },
-  {
-    title: "示例分类4",
-  },
-  {
-    title: "示例分类5",
-  },
-  {
-    title: "友情链接",
+    title: "Show",
     sites: [
       {
-        title: "EsunR Blog",
-        description: "EsunR 的博客",
-        url: "https://www.esunr.xyz",
-        icon: "https://esunr-image-bed.oss-cn-beijing.aliyuncs.com/logo.jpg",
+        title: "Meow-Pics",
+        description: "沉浸式猫系瀑布流",
+        url: "https://meow-pics.pages.dev",
+      },
+      {
+        title: "Advanced-En-6TH",
+        description: "高级英语课文解析",
+        url: "https://advanced-en-6th.pages.dev",
+      },
+      {
+        title: "OpenList",
+        description: "聚合网盘服务",
+        url: "https://ebsoabbcsrma.us-west-1.clawcloudrun.com",
+      },
+      {
+        title: "MoonTV",
+        description: "跨平台的影视聚合播放器",
+        url: "https://moontv-idk.onrender.com",
+      },
+      {
+        title: "Navidrome",
+        description: "音樂串流伺服器服務",
+        url: "https://idkbunglle-navi.hf.space",
+      },
+    ],
+  },
+  {
+    title: "AI&LLM",
+    sites: [
+      {
+        title: "OpenWebui",
+        description: "开源自托管AI平台",
+        url: "https://idktangle-openllm.hf.space",
+      },
+      {
+        title: "Gemini-Chat",
+        description: "私有化 Gemini 应用",
+        url: "https://gemini-chat-idk.vercel.app",
+      },
+      {
+        title: "Gemini-Balance",
+        description: "Gemini API 代理轮询系统",
+        url: "https://gemini-balance-idk.onrender.com",
+      },
+      {
+        title: "GPT-Load",
+        description: "LLM API 接口透明代理服务",
+        url: "https://gpt-load-idk.onrender.com",
+      },
+      {
+        title: "Veloera",
+        description: "LLM API 接口聚合管理网关系统",
+        url: "https://veloera-idk.onrender.com",
+      },
+      {
+        title: "Done-Hub",
+        description: "OpenAI 接口聚合管理与二次分发",
+        url: "https://done-hub-idk.onrender.com",
+      },
+      {
+        title: "API-Tracker",
+        description: "OpenAl API链路溯源，检测API中转",
+        url: "https://api-tracker.itvoyager.us",
+      },
+      {
+        title: "Nano-Banana",
+        description: "Nano-Banana改图修图",
+        url: "https://nano-bananana.pages.dev",
+      },
+      {
+        title: "Gemini-Play",
+        description: "Gemini多模态对话",
+        url: "https://gemini-play-idk.deno.dev",
+      },
+      {
+        title: "Siliconflow-STT-TTS",
+        description: "音频转录校准工具",
+        url: "https://siliconflow-stt-idk.onrender.com",
+      },
+      {
+        title: "Voicehub",
+        description: "AI 语音服务（STT, TTS)",
+        url: "https://voicehub.trageek.com",
+      },
+      {
+        title: "Libre-TTS",
+        description: "OpenAI, Edge TTS与STT",
+        url: "https://libre-tts.trageek.com",
+      },
+      {
+        title: "TTSFM",
+        description: "openai.fm逆向TTS",
+        url: "https://ttsfm-idk.onrender.com",
+      },
+    ],
+  },
+  {
+    title: "Web-Tools",
+    sites: [
+      {
+        title: "Resend-Pool",
+        description: "Resend批量发送邮件系统",
+        url: "https://resend-pool.pages.dev",
+      },
+      {
+        title: "ZuzUrl",
+        description: "短链接服务",
+        url: "https://sau.us.kg",
+      },
+      {
+        title: "HubProxy",
+        description: "GitHub & Docker加速",
+        url: "https://hubproxy-idk.onrender.com",
+      },
+      {
+        title: "Cors-Anywhere",
+        description: "前端跨域请求代理",
+        url: "https://cors-anywhere-idk.onrender.com",
+      },
+      {
+        title: "It-Tools",
+        description: "在线IT工具箱",
+        url: "https://it-tools-idk.onrender.com",
+      },
+      {
+        title: "MS-Email",
+        description: "Microsoft Oauth2API",
+        url: "https://ms-email-latest.onrender.com",
+      },
+      {
+        title: "SearXNG",
+        description: "开放元搜索引擎",
+        url: "https://searxng-idk.onrender.com",
+      },
+      {
+        title: "LibreSearch",
+        description: "开源元搜索引擎2",
+        url: "https://libresearch-idk.onrender.com",
+      },
+      {
+        title: "MusicTool",
+        description: "Navidrom歌单同步",
+        url: "https://musictool-web-idk.onrender.com",
+      },
+      {
+        title: "Smart-Mermaid",
+        description: "AI思维导图",
+        url: "https://smart-mermaid-idk.onrender.com",
+      },
+      {
+        title: "LRC-API",
+        description: "歌词匹配API",
+        url: "https://lrcapi-idk.onrender.com",
+      },
+      {
+        title: "CookieCloud",
+        description: "cookie跨浏览器跨设备传输",
+        url: "https://cookiecloud-idk.onrender.com",
+      },
+      {
+        title: "Pansou-UI",
+        description: "网盘资源搜索API",
+        url: "https://pansou-ui-idk.vercel.app",
+      },
+      {
+        title: "EasyNode",
+        description: "Linux 服务器Web SSH管理面板",
+        url: "https://neobungle-en.hf.space",
+      },
+      {
+        title: "Nodecrypt",
+        description: "端到端加密聊天室",
+        url: "https://nodecrypt.lichensheng.workers.dev",
+      },
+      {
+        title: "Outlook-Helper",
+        description: "微软Oauth2API收件",
+        url: "https://outlook-helper.pages.dev",
+      },
+      {
+        title: "Outlook-Helper-Batch",
+        description: "微软Oauth2API批量收件",
+        url: "https://outlook-helper-batch.pages.dev",
+      },
+    ],
+  },
+  {
+    title: "E-Mail Services",
+    sites: [
+      {
+        title: "WR.DO",
+        description: "一站式域名服务平台（短链生成、子域名托管、无限邮箱）",
+        url: "https://hissor.dpdns.org",
+      },
+      {
+        title: "Cloud-Mail",
+        description: "cloudflare邮局之cloud-mail",
+        url: "https://email.trageek.com",
+      },
+      {
+        title: "Cloudflare_temp_email",
+        description: "cloudflare邮局之Cloudflare_temp_email",
+        url: "https://email.itvoyager.us",
+      },
+      {
+        title: "Moemail",
+        description: "cloudflare邮局之Moemail",
+        url: "https://moemail-6-23.pages.dev",
       },
     ],
   },
@@ -55,11 +249,11 @@ const GLOBAL_CONFIG = {
   /**
    * 博客名称
    */
-  BLOG_NAME: "EsunR-Blog",
+  BLOG_NAME: "Idk's Landing Page",
   /**
    * 个人博客链接
    */
-  BLOG_URL: "https://blog.esunr.xyz",
+  BLOG_URL: "https://blog.trageek.com",
   /**
    * 指定中心 LOGO 图片地址
    */
@@ -67,7 +261,7 @@ const GLOBAL_CONFIG = {
   /**
    * 个人 Github 链接
    */
-  GITHUB_URL: "https://github.com/EsunR",
+  GITHUB_URL: "https://github.com/idkbungle",
   /**
    * 背景图片地址
    */
@@ -75,7 +269,7 @@ const GLOBAL_CONFIG = {
   /**
    * ICP 备案号，留空不显示
    */
-  ICP: "京ICP证000001号",
+  ICP: "",
   ICP_URL: "https://beian.miit.gov.cn/",
   FOOTER_INFO: true,
   /**
