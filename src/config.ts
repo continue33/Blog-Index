@@ -26,36 +26,6 @@ const WEBSITE_SORTS: WebsiteSort[] = [
     ],
   },
   {
-    title: "Show",
-    sites: [
-      {
-        title: "Meow-Pics",
-        description: "沉浸式猫系瀑布流",
-        url: "https://meow-pics.pages.dev",
-      },
-      {
-        title: "Advanced-En-6TH",
-        description: "高级英语课文解析",
-        url: "https://advanced-en-6th.pages.dev",
-      },
-      {
-        title: "OpenList",
-        description: "聚合网盘服务",
-        url: "https://ebsoabbcsrma.us-west-1.clawcloudrun.com",
-      },
-      {
-        title: "MoonTV",
-        description: "跨平台的影视聚合播放器",
-        url: "https://moontv-idk.onrender.com",
-      },
-      {
-        title: "Navidrome",
-        description: "音樂串流伺服器服務",
-        url: "https://idkbunglle-navi.hf.space",
-      },
-    ],
-  },
-  {
     title: "AI&LLM",
     sites: [
       {
@@ -216,6 +186,36 @@ const WEBSITE_SORTS: WebsiteSort[] = [
     ],
   },
   {
+    title: "Show",
+    sites: [
+      {
+        title: "Meow-Pics",
+        description: "沉浸式猫系瀑布流",
+        url: "https://meow-pics.pages.dev",
+      },
+      {
+        title: "Advanced-En-6TH",
+        description: "高级英语课文解析",
+        url: "https://advanced-en-6th.pages.dev",
+      },
+      {
+        title: "OpenList",
+        description: "聚合网盘服务",
+        url: "https://ebsoabbcsrma.us-west-1.clawcloudrun.com",
+      },
+      {
+        title: "MoonTV",
+        description: "跨平台的影视聚合播放器",
+        url: "https://moontv-idk.onrender.com",
+      },
+      {
+        title: "Navidrome",
+        description: "音樂串流伺服器服務",
+        url: "https://idkbunglle-navi.hf.space",
+      },
+    ],
+  },
+  {
     title: "E-Mail Services",
     sites: [
       {
@@ -299,8 +299,8 @@ const GLOBAL_CONFIG = {
    */
   TKD: {
     title: "Idk's Landing Page",
-    keywords: "Blog, Index, Index Page",
-    description: "This is my personal blog index page.",
+    keywords: "Blog, Index, Landing Page",
+    description: "This is my personal website landing page.",
   },
 };
 
