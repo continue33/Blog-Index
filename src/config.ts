@@ -79,12 +79,6 @@ const WEBSITE_SORTS: WebsiteSort[] = [
         url: "https://nano-bananana.pages.dev",
       },
       {
-        title: "Gemini-Play",
-        description: "Gemini多模态对话",
-        url: "https://gemini-play-idk.deno.dev",
-        icon: "https://imgbed-idk.pages.dev/file/favicons/1762659079067_gemini-play-idk.deno.dev.svg",
-      },
-      {
         title: "Siliconflow-STT-TTS",
         description: "音频转录校准工具",
         url: "https://siliconflow-stt-idk.onrender.com",
@@ -186,12 +180,6 @@ const WEBSITE_SORTS: WebsiteSort[] = [
         icon: "https://imgbed-idk.pages.dev/file/favicons/1762659090744_pansou-ui-idk.vercel.app.png",
       },
       {
-        title: "EasyNode",
-        description: "Linux 服务器Web SSH管理面板",
-        url: "https://neobungle-en.hf.space",
-        icon: "https://imgbed-idk.pages.dev/file/favicons/1762659086361_neobungle-en.hf.space.png",
-      },
-      {
         title: "Nodecrypt",
         description: "端到端加密聊天室",
         url: "https://nodecrypt.lichensheng.workers.dev",
@@ -226,7 +214,7 @@ const WEBSITE_SORTS: WebsiteSort[] = [
       {
         title: "OpenList",
         description: "聚合网盘服务",
-        url: "https://ebsoabbcsrma.us-west-1.clawcloudrun.com",
+        url: "https://openlist.trageek.com",
         icon: "https://imgbed-idk.pages.dev/file/favicons/1762659074408_ebsoabbcsrma.us-west-1.clawcloudrun.com.svg",
       },
       {
