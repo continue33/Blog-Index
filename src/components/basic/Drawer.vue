@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { CloseSquareFilled, SketchOutlined } from "@ant-design/icons-vue";
 import { ref, toRefs, watch } from "vue";
 
 defineOptions({
@@ -33,10 +32,6 @@ watch(modelValue, (newVal) => {
   }
 });
 
-function onCloseBtnClick() {
-  emit("update:modelValue", false);
-}
-
 function onDrawerClick(e: Event) {
   if (e.target === e.currentTarget) {
     emit("update:modelValue", false);
@@ -55,15 +50,8 @@ function onDrawerClick(e: Event) {
       @click="onDrawerClick"
     >
       <div :class="['drawer__inner', { 'is-opened': modelValue }]">
-        <close-square-filled
-          class="drawer__close-btn"
-          @click="onCloseBtnClick"
-        />
         <div class="drawer__content">
           <slot></slot>
-        </div>
-        <div class="drawer__footer">
-          <sketch-outlined class="footer-icon" />
         </div>
       </div>
     </div>
@@ -79,12 +67,12 @@ function onDrawerClick(e: Event) {
   left: 0;
   overflow: hidden;
 
-  // 暖色调（参考 Sendflare Pool 面板）
-  --regular-text-color: #382b20;
-  --secondary-text-color: #887568;
-  --warm-card: #fcf8f1;
-  --warm-line: #e2d6c6;
-  --warm-accent: #a8693a;
+  // 暗色磨砂玻璃（与星空背景同色系）
+  --regular-text-color: #ece8f4;
+  --secondary-text-color: rgba(236, 232, 244, 0.55);
+  --warm-card: rgba(255, 255, 255, 0.045);
+  --warm-line: rgba(255, 255, 255, 0.09);
+  --warm-accent: #b8aae8;
   color: var(--regular-text-color);
 
   &__inner {
@@ -95,9 +83,17 @@ function onDrawerClick(e: Event) {
     transition: transform ease 0.5s;
     transform: translate(-50%, calc(100% + 0.5rem));
     z-index: 100;
-    background-color: #f5f0e6;
+    background-color: rgba(14, 12, 20, 0.55);
+    background-image: linear-gradient(
+      160deg,
+      rgba(255, 255, 255, 0.07),
+      rgba(255, 255, 255, 0.01) 45%
+    );
+    -webkit-backdrop-filter: blur(22px) saturate(150%);
+    backdrop-filter: blur(22px) saturate(150%);
     border: 1px solid var(--warm-line);
-    box-shadow: 0 10px 30px rgba(109, 79, 40, 0.18);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
     width: calc(100vw - 1rem);
     box-sizing: border-box;
     border-radius: var(--regular-border-radius);
@@ -122,8 +118,12 @@ function onDrawerClick(e: Event) {
     right: 1rem;
     top: 1.1rem;
     font-size: 1.2rem;
-    color: #aa5d4a;
+    color: rgba(236, 232, 244, 0.6);
     cursor: pointer;
+    transition: color 0.2s;
+    &:hover {
+      color: #fff;
+    }
   }
 
   &__content {

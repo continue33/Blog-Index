@@ -161,7 +161,7 @@ onMounted(() => {
 .website-drawer__drawer {
   .drawer__content {
     .tabs__header {
-      width: calc(100% - 1.2rem);
+      width: 100%;
     }
     .tabs__content {
       height: 60vh;

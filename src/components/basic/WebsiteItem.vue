@@ -19,7 +19,7 @@ defineProps<{
     <div
       class="website-item__logo"
       :style="{
-        backgroundColor: item.color || (item.icon ? undefined : '#d89b61'),
+        backgroundColor: item.color || (item.icon ? undefined : 'rgba(184, 170, 232, 0.28)'),
       }"
     >
       <img
@@ -52,14 +52,15 @@ $text-line-height: 1.4rem;
 
   @media (any-hover: hover) {
     &:hover {
-      border: 1px solid var(--warm-accent, #a8693a);
-      box-shadow: 0 6px 18px rgba(109, 79, 40, 0.12);
+      border: 1px solid rgba(184, 170, 232, 0.45);
+      background-color: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 0 18px rgba(184, 170, 232, 0.12);
     }
   }
 
   &:active {
-    border: 1px solid var(--warm-accent, #a8693a);
-    box-shadow: inset 0px 0px 0.3rem 0px rgba(109, 79, 40, 0.3);
+    border: 1px solid rgba(184, 170, 232, 0.45);
+    box-shadow: inset 0px 0px 0.3rem 0px rgba(0, 0, 0, 0.5);
     transform: scale(0.99);
   }
 
