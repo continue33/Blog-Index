@@ -106,7 +106,6 @@ onMounted(() => {
   let curY = 0;
   let t = 0;
   let raf = 0;
-  let inView = true;
   const motionMq = window.matchMedia("(prefers-reduced-motion: reduce)");
   let reduced = motionMq.matches;
 
@@ -276,7 +275,7 @@ onMounted(() => {
   }
 
   const shouldRun = () =>
-    !reduced && inView && !document.hidden && dustCount > 0;
+    !reduced && !document.hidden && dustCount > 0;
   function updateLoop() {
     if (shouldRun()) {
       if (!raf) raf = requestAnimationFrame(frame);
@@ -310,17 +309,14 @@ onMounted(() => {
   const ro = new ResizeObserver(resize);
   ro.observe(canvas);
 
-  const io = new IntersectionObserver(
-    ([e]) => {
-      inView = e?.isIntersecting ?? true;
-      updateLoop();
-    },
-    { threshold: 0.05 }
-  );
-  io.observe(canvas);
+  // 全屏背景始终在视口内，不再用 IntersectionObserver 暂停：
+  // 开场动画期间画布被圆形裁剪到很小，观察器可能误判为离屏而停住循环。
+  // 后台标签页由 visibilitychange 负责暂停。
 
   const onVisibility = () => updateLoop();
   document.addEventListener("visibilitychange", onVisibility);
+  window.addEventListener("focus", onVisibility);
+  window.addEventListener("pageshow", onVisibility);
 
   const onPointerMove = (e: PointerEvent) => {
     if (reduced) return;
@@ -353,8 +349,9 @@ onMounted(() => {
     if (raf) cancelAnimationFrame(raf);
     raf = 0;
     ro.disconnect();
-    io.disconnect();
     document.removeEventListener("visibilitychange", onVisibility);
+    window.removeEventListener("focus", onVisibility);
+    window.removeEventListener("pageshow", onVisibility);
     window.removeEventListener("pointermove", onPointerMove);
     window.removeEventListener("pointerout", onPointerOut);
     motionMq.removeEventListener("change", onMotionChange);
