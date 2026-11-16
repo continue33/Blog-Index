@@ -120,7 +120,7 @@ onMounted(() => {
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color: #fda085;
+    background-color: rgba(225, 176, 98, 0.08);
     overflow: hidden;
     transition: background-color 0.5s;
     border-radius: 100%;
