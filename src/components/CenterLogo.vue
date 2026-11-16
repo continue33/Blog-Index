@@ -49,9 +49,16 @@ function goToBlog() {
   window.location.href = GLOBAL_CONFIG.BLOG_URL;
 }
 
+/** 主标语（SLOGANS[0]）出现的概率，其余标语平分剩下的概率 */
+const PRIMARY_SLOGAN_WEIGHT = 0.5;
+
 function randomSlogan() {
   const slogans = GLOBAL_CONFIG.SLOGANS;
-  slogan.value = slogans[randomNum(0, slogans.length - 1)];
+  if (slogans.length <= 1 || Math.random() < PRIMARY_SLOGAN_WEIGHT) {
+    slogan.value = slogans[0] || "";
+    return;
+  }
+  slogan.value = slogans[randomNum(1, slogans.length - 1)];
 }
 
 onMounted(() => {
@@ -72,7 +79,7 @@ onMounted(() => {
         :src="GLOBAL_CONFIG.LOGO_URL || LocalLogo"
       />
       <div :class="['hello', { hello_bottom: touchable }]">
-        <div>{{ slogan }}</div>
+        <div class="slogan">{{ slogan }}</div>
         <div class="hello_bottom_text">
           <a href="https://blog.trageek.com" target="_blank" rel="noopener" @click.stop>Click to visit Leo's Blog</a>
         </div>
@@ -138,7 +145,8 @@ onMounted(() => {
     }
     .hello {
       color: #ffffff;
-      width: 18.75rem;
+      width: max-content;
+      min-width: 18.75rem;
       text-align: center;
       position: absolute;
       transform: translate(-50%, -50%);
@@ -146,6 +154,10 @@ onMounted(() => {
       opacity: 0;
       top: 100px;
       transition: all 1s;
+      .slogan {
+        white-space: nowrap;
+        font-size: clamp(1rem, 5vw, 1.5rem);
+      }
     }
     .hello_bottom {
       opacity: 1;

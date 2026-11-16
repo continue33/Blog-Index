@@ -303,16 +303,14 @@ const GLOBAL_CONFIG = {
    * 网站欢迎标语
    */
   SLOGANS: [
-    "Talk is cheap. Show me the code.",
-    "愿你的代码一次编译通过",
-    "Build things. Break things. Learn.",
-    "代码写累了，来看看星星",
-    "所有伟大的项目，都始于一个周末",
-    "Ship early, ship often.",
-    "一切皆可 revert，除了时间",
+    // 第一句为主标语，出现概率更高（见 CenterLogo.vue 中的 PRIMARY_SLOGAN_WEIGHT）
+    "Where Possible Begins!",
     "Stay hungry, stay compiling.",
-    "今天的 commit 也很有分量",
-    "在我的机器上，它能跑",
+    "PRs welcome. Ego optional.",
+    "Works locally, ships globally.",
+    "Fork ideas, merge kindness.",
+    "Build in public, learn in public.",
+    "Somewhere, something compiling.",
   ],
   /**
    * Website 分类配置
