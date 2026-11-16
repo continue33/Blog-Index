@@ -10,7 +10,7 @@ const WEBSITE_SORTS: WebsiteSort[] = [
         icon: "https://imgbed-idk.pages.dev/file/favicons/1762659079818_blog.trageek.com.jpg",
       },
       {
-        title: "Blog-BackUP",
+        title: "Blog-Backup",
         description: "博客备用站点",
         url: "https://blog.itvoyager.us",
         icon: "https://imgbed-idk.pages.dev/file/favicons/1762659078058_blog.itvoyager.us.jpg",
