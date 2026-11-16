@@ -4,24 +4,25 @@ const WEBSITE_SORTS: WebsiteSort[] = [
     title: "General",
     sites: [
       {
-        title: "Blog1",
+        title: "Blog",
         description: "博客主站",
         url: "https://blog.trageek.com",
         icon: "https://imgbed-idk.pages.dev/file/favicons/1762659079818_blog.trageek.com.jpg",
       },
       {
-        title: "Blog2",
+        title: "Blog-BackUP",
         description: "博客备用站点",
         url: "https://blog.itvoyager.us",
         icon: "https://imgbed-idk.pages.dev/file/favicons/1762659078058_blog.itvoyager.us.jpg",
       },
       {
-        title: "Monitor1",
+        title: "Monitor",
         description: "服务监控1号",
         url: "https://monitor.itvoyager.us",
+        icon: "https://imgbed-idk.pages.dev/file/favicon/1794801001941_kuma-mieru-logo.svg",
       },
       {
-        title: "Monitor2",
+        title: "Monitor-Backup",
         description: "服务监控2号",
         url: "https://uptimer.trageek.com/status/idkbungle",
         icon: "https://imgbed-idk.pages.dev/file/favicons/1762659089662_uptimer.trageek.com.png",

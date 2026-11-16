@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { computed, onMounted, ref, toRefs, watch } from "vue";
+import { computed, onMounted, onUnmounted, ref, toRefs, watch } from "vue";
 import Drawer from "@/components/basic/Drawer.vue";
-import { UpOutlined } from "@ant-design/icons-vue";
+import { UpOutlined, SearchOutlined, CloseCircleFilled } from "@ant-design/icons-vue";
 import Tabs from "@/components/basic/Tabs/index.vue";
 import TabPanel from "@/components/basic/Tabs/TabPanel.vue";
 import GLOBAL_CONFIG from "@/config";
@@ -30,6 +30,8 @@ const activeTabs = ref<TabPanelProps["name"]>(0);
 const websiteSorts = ref<WebsiteSort[]>([]);
 const websiteItems = ref<WebsiteItem[]>([]);
 const disableUserActionInput = ref(false);
+const keyword = ref("");
+const searchInputRef = ref<HTMLInputElement>();
 
 const websiteConfig = computed<WebsiteConfig[]>(() => {
   if (isWebsiteSortsOld(websiteSorts.value, websiteItems.value)) {
@@ -44,6 +46,42 @@ const websiteConfig = computed<WebsiteConfig[]>(() => {
     return websiteSorts.value;
   }
 });
+
+const searchResults = computed(() => {
+  const q = keyword.value.trim().toLowerCase();
+  if (!q) return [];
+  const terms = q.split(/\s+/);
+  const list: (Omit<WebsiteItem, "sortId"> & { sortTitle: string })[] = [];
+  websiteConfig.value.forEach((sort) => {
+    sort.sites?.forEach((site) => {
+      const hay = [site.title, site.description, site.url, sort.title]
+        .filter(Boolean)
+        .join(" ")
+        .toLowerCase();
+      if (terms.every((t) => hay.includes(t))) {
+        list.push({ ...site, sortTitle: sort.title });
+      }
+    });
+  });
+  return list;
+});
+
+function clearKeyword() {
+  keyword.value = "";
+  searchInputRef.value?.focus();
+}
+
+function onGlobalKeydown(e: KeyboardEvent) {
+  if (!modelValue.value) return;
+  const typing = document.activeElement === searchInputRef.value;
+  if (e.key === "/" && !typing) {
+    e.preventDefault();
+    searchInputRef.value?.focus();
+  } else if (e.key === "Escape" && typing) {
+    if (keyword.value) keyword.value = "";
+    else searchInputRef.value?.blur();
+  }
+}
 
 useMouseWheel({
   disable: disableUserActionInput,
@@ -78,6 +116,11 @@ watch(
 
 onMounted(() => {
   getWebsiteDrawerData();
+  window.addEventListener("keydown", onGlobalKeydown);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("keydown", onGlobalKeydown);
 });
 </script>
 
@@ -97,7 +140,39 @@ onMounted(() => {
       class="website-drawer__drawer"
       @update:model-value="$emit('update:modelValue', $event)"
     >
-      <Tabs v-model="activeTabs">
+      <div class="website-search">
+        <search-outlined class="website-search__icon" />
+        <input
+          ref="searchInputRef"
+          v-model="keyword"
+          class="website-search__input"
+          type="search"
+          placeholder="搜索网站名称、描述或地址（按 / 聚焦）"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <close-circle-filled
+          v-if="keyword"
+          class="website-search__clear"
+          @click="clearKeyword"
+        />
+      </div>
+      <div v-if="keyword.trim()" class="website-search-results">
+        <div class="website-search-results__meta">
+          找到 {{ searchResults.length }} 个网站
+        </div>
+        <div v-if="searchResults.length" class="website-grid">
+          <WebsiteItem
+            v-for="website in searchResults"
+            :key="website.url"
+            :item="website"
+          />
+        </div>
+        <div v-else class="website-search-results__empty">
+          没有匹配「{{ keyword.trim() }}」的网站
+        </div>
+      </div>
+      <Tabs v-show="!keyword.trim()" v-model="activeTabs">
         <TabPanel
           v-for="(config, index) in websiteConfig"
           :key="index"
@@ -159,6 +234,77 @@ onMounted(() => {
 
 <style lang="scss">
 .website-drawer__drawer {
+  .website-grid,
+  .drawer__content .tabs__content .tab-panel {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: var(--mini-gap);
+    align-items: flex-start;
+    @media screen and (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media screen and (min-width: 1100px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  .website-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--mini-gap);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--warm-line);
+    border-radius: 999px;
+    padding: 0 0.9rem;
+    transition: border-color 0.2s, background 0.2s;
+    &:focus-within {
+      border-color: rgba(184, 170, 232, 0.55);
+      background: rgba(255, 255, 255, 0.08);
+    }
+    &__icon {
+      color: var(--secondary-text-color);
+      margin-right: 0.5rem;
+    }
+    &__input {
+      flex: 1;
+      min-width: 0;
+      height: 2.2rem;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--regular-text-color);
+      font-size: var(--regular-font-size);
+      &::placeholder {
+        color: var(--secondary-text-color);
+      }
+      &::-webkit-search-cancel-button {
+        display: none;
+      }
+    }
+    &__clear {
+      color: var(--secondary-text-color);
+      cursor: pointer;
+      &:hover {
+        color: var(--regular-text-color);
+      }
+    }
+  }
+  .website-search-results {
+    height: 60vh;
+    overflow-y: auto;
+    &__meta {
+      font-size: var(--small-font-size);
+      color: var(--secondary-text-color);
+      margin-bottom: var(--mini-gap);
+    }
+    &__empty {
+      height: 70%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--secondary-text-color);
+    }
+  }
   .drawer__content {
     .tabs__header {
       width: 100%;
@@ -167,16 +313,6 @@ onMounted(() => {
       height: 60vh;
 
       .tab-panel {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto;
-        grid-gap: var(--mini-gap);
-        align-items: flex-start;
-
-        @media screen and (min-width: 768px) {
-          grid-template-columns: repeat(4, 1fr);
-        }
-
         &.empty-panel {
           height: 100%;
           display: flex;

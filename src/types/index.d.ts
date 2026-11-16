@@ -16,5 +16,7 @@ interface WebsiteItem {
   description?: string;
   url: string;
   icon?: string;
+  /** 预览截图，留空则按 url 自动对应 /previews/<host>.webp */
+  preview?: string;
   color?: string;
 }
