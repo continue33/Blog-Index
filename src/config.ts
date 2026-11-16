@@ -33,7 +33,25 @@ const WEBSITE_SORTS: WebsiteSort[] = [
     title: "AI&LLM",
     sites: [
       {
-        title: "OpenWebui",
+        title: "Gemini-Live-Interpretation",
+        description: "Gemini Live 实时语音同传互译",
+        url: "https://gemini-live-interpretation.pages.dev",
+        icon: "https://imgbed-idk.pages.dev/file/favicon/1794829688943_gemini-live-interpretation.svg",
+      },
+      {
+        title: "HaloWebUI",
+        description: "多模型 AI 对话平台",
+        url: "https://walmartshoppingbag-halowebui.hf.space",
+        icon: "https://imgbed-idk.pages.dev/file/favicon/1794829693586_halowebui.png",
+      },
+      {
+        title: "AssemblyAI-Hub",
+        description: "AssemblyAI 转写网关与多账号管理",
+        url: "https://assemblyai-hub.onrender.com",
+        icon: "https://imgbed-idk.pages.dev/file/favicon/1794829690761_assemblyai-hub.svg",
+      },
+      {
+        title: "OpenWebUI",
         description: "开源自托管AI平台",
         url: "https://idktangle-openllm.hf.space",
         icon: "https://imgbed-idk.pages.dev/file/favicons/1762659079786_idktangle-openllm.hf.space.png",
@@ -105,6 +123,24 @@ const WEBSITE_SORTS: WebsiteSort[] = [
   {
     title: "Web-Tools",
     sites: [
+      {
+        title: "Gotify",
+        description: "自托管消息推送服务",
+        url: "https://gotify.trageek.com",
+        icon: "https://imgbed-idk.pages.dev/file/favicon/1794829694680_gotify.png",
+      },
+      {
+        title: "Ntfy",
+        description: "HTTP 推送通知服务",
+        url: "https://ntfy.trageek.com",
+        icon: "https://imgbed-idk.pages.dev/file/favicon/1794829674789_ntfy.png",
+      },
+      {
+        title: "Baimiao-OCR",
+        description: "白描 OCR：文字、表格、公式识别",
+        url: "https://baimiao.hissor.dpdns.org",
+        icon: "https://imgbed-idk.pages.dev/file/favicon/1794829687416_baimiao.png",
+      },
       {
         title: "Resend-Pool",
         description: "Resend批量发送邮件系统",
@@ -198,8 +234,60 @@ const WEBSITE_SORTS: WebsiteSort[] = [
     ],
   },
   {
+    title: "Multi-Manager",
+    sites: [
+      {
+        title: "GitHub-Manager",
+        description: "GitHub 多账户仓库、Star、Token 管理",
+        url: "https://github-manager.ilovehark.workers.dev",
+        icon: "https://imgbed-idk.pages.dev/file/favicon/1794829695507_github-manager.svg",
+      },
+      {
+        title: "CF-Manager",
+        description: "Cloudflare 多账户管理",
+        url: "https://cf-manager-idk.pages.dev",
+      },
+      {
+        title: "R2-Manager-S3",
+        description: "R2 多账户管理（S3 API 版）",
+        url: "https://r2-manager-s3.trageek.com",
+        icon: "https://imgbed-idk.pages.dev/file/favicon/1794829702704_r2-manager-s3.svg",
+      },
+      {
+        title: "R2-Manager",
+        description: "R2 多账户批量管理（CF API 版）",
+        url: "https://r2-manager.trageek.com",
+        icon: "https://imgbed-idk.pages.dev/file/favicon/1794829697853_r2-manager.svg",
+      },
+      {
+        title: "HF-Storage-CF",
+        description: "Hugging Face 多账户数据集与 Bucket 管理",
+        url: "https://hf-storage.trageek.com",
+        icon: "https://imgbed-idk.pages.dev/file/favicon/1794829696769_hf-storage.svg",
+      },
+      {
+        title: "HF-Manager-CF",
+        description: "Hugging Face 多账户 Space 控制台",
+        url: "https://hf-manager-cf.itvoyager.us",
+        icon: "https://imgbed-idk.pages.dev/file/favicon/1794829693695_hf-manager-cf.svg",
+      },
+      {
+        title: "Aiven-Live",
+        description: "Aiven 免费服务多账户保活",
+        url: "https://aiven-live.itvoyager.us",
+        icon: "https://imgbed-idk.pages.dev/file/favicon/1794829683926_aiven-live.svg",
+      },
+    ],
+  },
+  {
     title: "Show",
     sites: [
+      {
+        title: "ImgBed",
+        description: "CloudFlare 图床与文件托管",
+        url: "https://imgbed-idk.pages.dev",
+        icon: "https://imgbed-idk.pages.dev/file/favicon/1794829695514_imgbed.png",
+      },
       {
         title: "Meow-Pics",
         description: "沉浸式猫系瀑布流",
@@ -232,13 +320,37 @@ const WEBSITE_SORTS: WebsiteSort[] = [
     ],
   },
   {
-    title: "E-Mail Services",
+    title: "Webmail",
     sites: [
       {
         title: "WR.DO",
-        description: "一站式域名服务平台（短链生成、子域名托管、无限邮箱）",
-        url: "https://hissor.dpdns.org",
-        icon: "https://imgbed-idk.pages.dev/file/favicons/1762659081232_hissor.dpdns.org.ico",
+        description: "一站式域名服务平台（短链、子域名托管、无限邮箱）",
+        url: "https://idkbunglle.dpdns.org/emails",
+        icon: "https://imgbed-idk.pages.dev/file/favicon/1794829704961_wr-do.png",
+      },
+      {
+        title: "OmniMail",
+        description: "简洁私有的 Cloudflare 域名邮箱",
+        url: "https://omnia.dpdns.org",
+        icon: "https://imgbed-idk.pages.dev/file/favicon/1794829699330_omnimail.svg",
+      },
+      {
+        title: "Resend-Pool-CF",
+        description: "Resend 多 Key 批量发信（Workers 版）",
+        url: "https://resend-pool-cf.lichensheng7.workers.dev",
+        icon: "https://imgbed-idk.pages.dev/file/favicon/1794829707948_resend-pool-cf.png",
+      },
+      {
+        title: "Sendflare-Pool-CF",
+        description: "Sendflare 多 Key 批量发信（Workers 版）",
+        url: "https://sendflare-pool-cf.lichensheng7.workers.dev",
+        icon: "https://imgbed-idk.pages.dev/file/favicon/1794829707420_sendflare-pool-cf.png",
+      },
+      {
+        title: "SMTP-Relay-Configurator",
+        description: "Resend / Sendflare 发信域名 DNS 一键配置",
+        url: "https://smtp-relay-configurator-cf.qihaolouzhang.workers.dev",
+        icon: "https://imgbed-idk.pages.dev/file/favicon/1794829704036_smtp-relay-configurator.svg",
       },
       {
         title: "Cloud-Mail",
