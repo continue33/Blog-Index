@@ -303,15 +303,16 @@ const GLOBAL_CONFIG = {
    * 网站欢迎标语
    */
   SLOGANS: [
-    "欢迎拜访",
-    "歡迎拜訪",
-    "Welcome, my friend!",
-    "訪問へようこそ",
-    "嗨，别来无恙",
-    "不忘初心，一生浪漫",
-    "最近还好吗？",
-    "流星，落花，萤火",
-    "马车越空，晃荡越响",
+    "Talk is cheap. Show me the code.",
+    "愿你的代码一次编译通过",
+    "Build things. Break things. Learn.",
+    "代码写累了，来看看星星",
+    "所有伟大的项目，都始于一个周末",
+    "Ship early, ship often.",
+    "一切皆可 revert，除了时间",
+    "Stay hungry, stay compiling.",
+    "今天的 commit 也很有分量",
+    "在我的机器上，它能跑",
   ],
   /**
    * Website 分类配置
