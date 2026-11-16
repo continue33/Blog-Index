@@ -79,6 +79,14 @@ function onDrawerClick(e: Event) {
   left: 0;
   overflow: hidden;
 
+  // 暖色调（参考 Sendflare Pool 面板）
+  --regular-text-color: #382b20;
+  --secondary-text-color: #887568;
+  --warm-card: #fcf8f1;
+  --warm-line: #e2d6c6;
+  --warm-accent: #a8693a;
+  color: var(--regular-text-color);
+
   &__inner {
     padding: 1rem;
     position: absolute;
@@ -87,7 +95,9 @@ function onDrawerClick(e: Event) {
     transition: transform ease 0.5s;
     transform: translate(-50%, calc(100% + 0.5rem));
     z-index: 100;
-    background-color: #f1f1f1;
+    background-color: #f5f0e6;
+    border: 1px solid var(--warm-line);
+    box-shadow: 0 10px 30px rgba(109, 79, 40, 0.18);
     width: calc(100vw - 1rem);
     box-sizing: border-box;
     border-radius: var(--regular-border-radius);
@@ -112,6 +122,8 @@ function onDrawerClick(e: Event) {
     right: 1rem;
     top: 1.1rem;
     font-size: 1.2rem;
+    color: #aa5d4a;
+    cursor: pointer;
   }
 
   &__content {
@@ -124,6 +136,7 @@ function onDrawerClick(e: Event) {
     align-items: center;
     justify-content: flex-end;
     font-size: var(--small-font-size);
+    color: var(--warm-accent);
     .footer-icon {
       margin-right: 0.3rem;
       font-size: var(--regular-font-size);

@@ -4,6 +4,7 @@ import { randomNum } from "@/utils";
 import { onMounted, ref } from "vue";
 import LocalLogo from "@/assets/logo.svg";
 import { useHead } from "@unhead/vue";
+import ConstellationField from "@/components/ConstellationField.vue";
 
 defineOptions({
   name: "CenterLogo",
@@ -34,15 +35,11 @@ if (GLOBAL_CONFIG.LOGO_URL) {
 }
 
 /**
- * 加载背景图片
+ * 星空背景由 canvas 即时绘制，无需等待图片加载
  */
 function loadBackground() {
-  var img = new Image();
-  img.src = GLOBAL_CONFIG.BACKGROUND_IMG_URL;
-  img.addEventListener("load", () => {
-    bgLoaded.value = true;
-    emit("backgroundLoaded");
-  });
+  bgLoaded.value = true;
+  emit("backgroundLoaded");
 }
 
 /**
@@ -64,10 +61,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <div
-    :class="['logo-area', { 'is-blur': drawerVisible }]"
-    :style="{ background: `url(${$config.BACKGROUND_IMG_URL})` }"
-  >
+  <div :class="['logo-area', { 'is-blur': drawerVisible }]">
+    <div class="stars-wrap">
+      <ConstellationField />
+    </div>
     <div :class="['img-shadow', { 'img-shadow-show': bgLoaded }]"></div>
     <div class="inner" style="cursor: pointer" @click="goToBlog">
       <img
@@ -77,10 +74,10 @@ onMounted(() => {
       <div :class="['hello', { hello_bottom: touchable }]">
         <div>{{ slogan }}</div>
         <div class="hello_bottom_text">
-          <a href="https://blog.trageek.com" target="_blank" rel="noopener" @click.stop>Click to visit JackLee-Blog</a>
+          <a href="https://blog.trageek.com" target="_blank" rel="noopener" @click.stop>Click to visit Leo's Blog</a>
         </div>
         <div class="hello_bottom_text">
-          <a href="https://monitor.trageek.com" target="_blank" rel="noopener" @click.stop>Click to see site status-monitoring page</a>
+          <a href="https://monitor.trageek.com" target="_blank" rel="noopener" @click.stop>Click to view Status Page</a>
         </div>
       </div>
     </div>
@@ -89,8 +86,8 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .logo-area {
-  background-size: cover !important;
-  background-position: center !important;
+  position: relative;
+  background: #010100;
   overflow: hidden;
   align-items: center;
   justify-content: center;
@@ -101,6 +98,15 @@ onMounted(() => {
   transition: all 0.8s;
   &.is-blur {
     filter: blur(5px);
+  }
+  .stars-wrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100vw;
+    height: calc(var(--vh, 1vh) * 100);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
   }
   .img-shadow {
     content: "";
@@ -115,19 +121,20 @@ onMounted(() => {
     animation-fill-mode: forwards;
   }
   .img-shadow-show {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(1, 1, 0, 0.12);
   }
   .inner {
     position: relative;
     .main-logo {
-      height: 7rem;
+      height: 5.2rem;
+      filter: drop-shadow(0 0 18px rgba(225, 176, 98, 0.18));
       position: absolute;
       transform: translate(-50%, -50%);
       transition: all 1s;
       top: 0;
     }
     .main-logo-top {
-      top: -3.2rem;
+      top: -3.4rem;
     }
     .hello {
       color: #ffffff;

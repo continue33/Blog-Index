@@ -27,7 +27,7 @@ onMounted(() => {
 
 watch([backgroundLoaded, animationEnd], () => {
   if (backgroundLoaded.value && animationEnd.value) {
-    document.body.style.backgroundColor = "rgba(0,0,0,0.8)";
+    document.body.style.backgroundColor = "#010100";
   }
 });
 

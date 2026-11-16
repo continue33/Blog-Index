@@ -237,7 +237,7 @@ onUnmounted(() => {
         height: 2px;
         width: 1.5rem;
         margin: var(--super-mini-gap) auto 0;
-        background-color: var(--regular-text-color);
+        background-color: var(--warm-accent, var(--regular-text-color));
         transform: scaleX(0);
         transition: transform 0.2s ease;
         border-radius: var(--regular-border-radius);

@@ -280,7 +280,7 @@ const GLOBAL_CONFIG = {
   /**
    * 博客名称
    */
-  BLOG_NAME: "Idk's Landing Page",
+  BLOG_NAME: "Leo's Constellation Field - Built by Leo",
   /**
    * 个人博客链接
    */
@@ -293,10 +293,6 @@ const GLOBAL_CONFIG = {
    * 个人 Github 链接
    */
   GITHUB_URL: "https://github.com/idkbungle",
-  /**
-   * 背景图片地址
-   */
-  BACKGROUND_IMG_URL: "https://hark-bing-random.itvoyager.us/",
   /**
    * ICP 备案号，留空不显示
    */
@@ -329,7 +325,7 @@ const GLOBAL_CONFIG = {
    * 网站 Title Keywords Description 的配置，用于 SEO
    */
   TKD: {
-    title: "Idk's Landing Page",
+    title: "Leo's Constellation Field - Built by Leo",
     keywords: "Blog, Index, Landing Page",
     description: "This is my personal website landing page.",
   },

@@ -19,7 +19,7 @@ defineProps<{
     <div
       class="website-item__logo"
       :style="{
-        backgroundColor: item.color || (item.icon ? undefined : '#bcbcbc'),
+        backgroundColor: item.color || (item.icon ? undefined : '#d89b61'),
       }"
     >
       <img
@@ -37,7 +37,7 @@ defineProps<{
 $text-line-height: 1.4rem;
 
 .website-item {
-  background-color: #ffffff;
+  background-color: var(--warm-card, #fcf8f1);
   padding: 0.5rem;
   border-radius: var(--regular-border-radius);
   overflow: hidden;
@@ -48,17 +48,18 @@ $text-line-height: 1.4rem;
   );
   cursor: pointer;
   transition: all 0.2s ease;
-  border: 1px solid #ffffff;
+  border: 1px solid var(--warm-line, #e2d6c6);
 
   @media (any-hover: hover) {
     &:hover {
-      border: 1px solid var(--secondary-text-color);
+      border: 1px solid var(--warm-accent, #a8693a);
+      box-shadow: 0 6px 18px rgba(109, 79, 40, 0.12);
     }
   }
 
   &:active {
-    border: 1px solid var(--secondary-text-color);
-    box-shadow: inset 0px 0px 0.3rem 0px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--warm-accent, #a8693a);
+    box-shadow: inset 0px 0px 0.3rem 0px rgba(109, 79, 40, 0.3);
     transform: scale(0.99);
   }
 
