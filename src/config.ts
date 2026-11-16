@@ -246,6 +246,7 @@ const WEBSITE_SORTS: WebsiteSort[] = [
         title: "CF-Manager",
         description: "Cloudflare 多账户管理",
         url: "https://cf-manager-idk.pages.dev",
+        icon: "https://imgbed-idk.pages.dev/file/favicon/1794831396973_cf-manager.png",
       },
       {
         title: "R2-Manager-S3",
