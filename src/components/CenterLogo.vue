@@ -50,7 +50,7 @@ function goToBlog() {
 }
 
 /** 主标语（SLOGANS[0]）出现的概率，其余标语平分剩下的概率 */
-const PRIMARY_SLOGAN_WEIGHT = 0.5;
+const PRIMARY_SLOGAN_WEIGHT = 0.25;
 
 function randomSlogan() {
   const slogans = GLOBAL_CONFIG.SLOGANS;
@@ -81,10 +81,10 @@ onMounted(() => {
       <div :class="['hello', { hello_bottom: touchable }]">
         <div class="slogan">{{ slogan }}</div>
         <div class="hello_bottom_text">
-          <a href="https://blog.trageek.com" target="_blank" rel="noopener" @click.stop>Click to visit Leo's Blog</a>
+          <a href="https://blog.trageek.com" target="_blank" rel="noopener" @click.stop>Leo's Blog</a>
         </div>
         <div class="hello_bottom_text">
-          <a href="https://monitor.trageek.com" target="_blank" rel="noopener" @click.stop>Click to view Status Page</a>
+          <a href="https://monitor.trageek.com" target="_blank" rel="noopener" @click.stop>Status Page</a>
         </div>
       </div>
     </div>
