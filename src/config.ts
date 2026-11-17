@@ -17,13 +17,13 @@ const WEBSITE_SORTS: WebsiteSort[] = [
       },
       {
         title: "Monitor",
-        description: "服务监控1号",
+        description: "服务监控 1 号",
         url: "https://monitor.itvoyager.us",
         icon: "https://imgbed-idk.pages.dev/file/favicon/1794801001941_kuma-mieru-logo.svg",
       },
       {
         title: "Monitor-Backup",
-        description: "服务监控2号",
+        description: "服务监控 2 号",
         url: "https://uptimer.trageek.com/status/idkbungle",
         icon: "https://imgbed-idk.pages.dev/file/favicons/1762659089662_uptimer.trageek.com.png",
       },
@@ -52,7 +52,7 @@ const WEBSITE_SORTS: WebsiteSort[] = [
       },
       {
         title: "OpenWebUI",
-        description: "开源自托管AI平台",
+        description: "开源自托管 AI 平台",
         url: "https://idktangle-openllm.hf.space",
         icon: "https://imgbed-idk.pages.dev/file/favicons/1762659079786_idktangle-openllm.hf.space.png",
       },
@@ -93,29 +93,29 @@ const WEBSITE_SORTS: WebsiteSort[] = [
       },
       {
         title: "Nano-Banana",
-        description: "Nano-Banana改图修图",
+        description: "Nano Banana 改图修图",
         url: "https://nano-bananana.pages.dev",
       },
       {
-        title: "Siliconflow-STT-TTS",
+        title: "SiliconFlow-STT-TTS",
         description: "音频转录校准工具",
         url: "https://siliconflow-stt-idk.onrender.com",
         icon: "https://imgbed-idk.pages.dev/file/favicons/1762659083863_siliconflow-stt-idk.onrender.com.svg",
       },
       {
         title: "Voicehub",
-        description: "AI 语音服务（STT, TTS)",
+        description: "AI 语音服务（STT、TTS）",
         url: "https://voicehub.trageek.com",
       },
       {
         title: "Libre-TTS",
-        description: "OpenAI, Edge TTS与STT",
+        description: "OpenAI、Edge TTS 与 STT",
         url: "https://libre-tts.trageek.com",
         icon: "https://imgbed-idk.pages.dev/file/favicons/1762659083851_libre-tts.trageek.com.png",
       },
       {
         title: "TTSFM",
-        description: "openai.fm逆向TTS",
+        description: "openai.fm 逆向 TTS",
         url: "https://ttsfm-idk.onrender.com",
       },
     ],
@@ -143,7 +143,7 @@ const WEBSITE_SORTS: WebsiteSort[] = [
       },
       {
         title: "Resend-Pool",
-        description: "Resend批量发送邮件系统",
+        description: "Resend 批量发送邮件系统",
         url: "https://resend-pool.pages.dev",
       },
       {
@@ -154,7 +154,7 @@ const WEBSITE_SORTS: WebsiteSort[] = [
       },
       {
         title: "HubProxy",
-        description: "GitHub & Docker加速",
+        description: "GitHub 与 Docker 加速",
         url: "https://hubproxy-idk.onrender.com",
         icon: "https://imgbed-idk.pages.dev/file/favicons/1762659076268_hubproxy-idk.onrender.com.png",
       },
@@ -164,14 +164,14 @@ const WEBSITE_SORTS: WebsiteSort[] = [
         url: "https://cors-anywhere-idk.onrender.com",
       },
       {
-        title: "It-Tools",
-        description: "在线IT工具箱",
+        title: "IT-Tools",
+        description: "在线 IT 工具箱",
         url: "https://it-tools-idk.onrender.com",
         icon: "https://imgbed-idk.pages.dev/file/favicons/1762659078442_it-tools-idk.onrender.com.ico",
       },
       {
         title: "MS-Email",
-        description: "Microsoft Oauth2API",
+        description: "Microsoft OAuth2 API 收件",
         url: "https://ms-email-latest.onrender.com",
       },
       {
@@ -182,7 +182,7 @@ const WEBSITE_SORTS: WebsiteSort[] = [
       },
       {
         title: "LibreSearch",
-        description: "开源元搜索引擎2",
+        description: "开源元搜索引擎",
         url: "https://libresearch-idk.onrender.com",
         icon: "https://imgbed-idk.pages.dev/file/favicons/1762659081685_libresearch-idk.onrender.com.png",
       },
@@ -194,41 +194,41 @@ const WEBSITE_SORTS: WebsiteSort[] = [
       },
       {
         title: "Smart-Mermaid",
-        description: "AI思维导图",
+        description: "AI 思维导图",
         url: "https://smart-mermaid-idk.onrender.com",
         icon: "https://imgbed-idk.pages.dev/file/favicons/1762659073259_smart-mermaid-idk.onrender.com.ico",
       },
       {
         title: "LRC-API",
-        description: "歌词匹配API",
+        description: "歌词匹配 API",
         url: "https://lrcapi-idk.onrender.com",
         icon: "https://imgbed-idk.pages.dev/file/favicons/1762659082943_lrcapi-idk.onrender.com.svg",
       },
       {
         title: "CookieCloud",
-        description: "cookie跨浏览器跨设备传输",
+        description: "Cookie 跨浏览器、跨设备同步",
         url: "https://cookiecloud-idk.onrender.com",
       },
       {
         title: "Pansou-UI",
-        description: "网盘资源搜索API",
+        description: "网盘资源搜索",
         url: "https://pansou-ui-idk.vercel.app",
         icon: "https://imgbed-idk.pages.dev/file/favicons/1762659090744_pansou-ui-idk.vercel.app.png",
       },
       {
-        title: "Nodecrypt",
+        title: "NodeCrypt",
         description: "端到端加密聊天室",
         url: "https://nodecrypt.lichensheng.workers.dev",
         icon: "https://imgbed-idk.pages.dev/file/favicons/1762659083217_nodecrypt.lichensheng.workers.dev.svg",
       },
       {
         title: "Outlook-Helper",
-        description: "微软Oauth2API收件",
+        description: "微软 OAuth2 API 收件",
         url: "https://outlook-helper.pages.dev",
       },
       {
         title: "Outlook-Helper-Batch",
-        description: "微软Oauth2API批量收件",
+        description: "微软 OAuth2 API 批量收件",
         url: "https://outlook-helper-batch.pages.dev",
       },
     ],
@@ -297,7 +297,7 @@ const WEBSITE_SORTS: WebsiteSort[] = [
     sites: [
       {
         title: "ImgBed",
-        description: "CloudFlare 图床与文件托管",
+        description: "Cloudflare 图床与文件托管",
         url: "https://imgbed-idk.pages.dev",
         icon: "https://imgbed-idk.pages.dev/file/favicon/1794829695514_imgbed.png",
       },
@@ -326,7 +326,7 @@ const WEBSITE_SORTS: WebsiteSort[] = [
       },
       {
         title: "Navidrome",
-        description: "音樂串流伺服器服務",
+        description: "音乐流媒体服务器",
         url: "https://idkbunglle-navi.hf.space",
         icon: "https://imgbed-idk.pages.dev/file/favicons/1762659079944_idkbunglle-navi.hf.space.png",
       },
@@ -367,19 +367,19 @@ const WEBSITE_SORTS: WebsiteSort[] = [
       },
       {
         title: "Cloud-Mail",
-        description: "cloudflare邮局之cloud-mail",
+        description: "Cloudflare 邮局之 Cloud-Mail",
         url: "https://email.trageek.com",
         icon: "https://imgbed-idk.pages.dev/file/favicons/1762659081936_email.trageek.com.svg",
       },
       {
-        title: "Cloudflare_temp_email",
-        description: "cloudflare邮局之Cloudflare_temp_email",
+        title: "Cloudflare-Temp-Email",
+        description: "Cloudflare 邮局之 Cloudflare Temp Email",
         url: "https://email.itvoyager.us",
         icon: "https://imgbed-idk.pages.dev/file/favicons/1762659074306_email.itvoyager.us.png",
       },
       {
-        title: "Moemail",
-        description: "cloudflare邮局之Moemail",
+        title: "MoeMail",
+        description: "Cloudflare 邮局之 MoeMail",
         url: "https://moemail-6-23.pages.dev",
         icon: "https://imgbed-idk.pages.dev/file/favicons/1762659086271_moemail-6-23.pages.dev.ico",
       },
