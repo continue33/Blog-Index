@@ -278,6 +278,18 @@ const WEBSITE_SORTS: WebsiteSort[] = [
         url: "https://aiven-live.itvoyager.us",
         icon: "https://imgbed-idk.pages.dev/file/favicon/1794829683926_aiven-live.svg",
       },
+      {
+        title: "Render-Manager",
+        description: "Render 多账户服务控制台",
+        url: "https://render-manager.itvoyager.us",
+        icon: "https://imgbed-idk.pages.dev/file/favicon/1794880915609_render-manager.svg",
+      },
+      {
+        title: "Resend-Manager",
+        description: "Resend 多账户 API Key 检测",
+        url: "https://resend-manager.qihaolouzhang.workers.dev",
+        icon: "https://imgbed-idk.pages.dev/file/favicon/1794880914442_resend-manager.svg",
+      },
     ],
   },
   {
