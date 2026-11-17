@@ -51,6 +51,12 @@ const WEBSITE_SORTS: WebsiteSort[] = [
         icon: "https://imgbed-idk.pages.dev/file/favicon/1794829690761_assemblyai-hub.svg",
       },
       {
+        title: "AssemblyAI-Hub-Backup",
+        description: "AssemblyAI-Hub 备用站点",
+        url: "https://qihaolouzhang-assemblyai.hf.space",
+        icon: "https://imgbed-idk.pages.dev/file/favicon/1794829690761_assemblyai-hub.svg",
+      },
+      {
         title: "OpenWebUI",
         description: "开源自托管 AI 平台",
         url: "https://idktangle-openllm.hf.space",
@@ -231,6 +237,24 @@ const WEBSITE_SORTS: WebsiteSort[] = [
         description: "微软 OAuth2 API 批量收件",
         url: "https://outlook-helper-batch.pages.dev",
       },
+      {
+        title: "CloudPaste",
+        description: "在线剪贴板与文件分享",
+        url: "https://cloudpaste-idk.pages.dev",
+        icon: "https://imgbed-idk.pages.dev/file/favicon/1794884531899_cloudpaste.svg",
+      },
+      {
+        title: "Web-Archive",
+        description: "网页存档",
+        url: "https://web-archive-idk.pages.dev",
+        icon: "https://imgbed-idk.pages.dev/file/favicon/1794884533617_web-archive.svg",
+      },
+      {
+        title: "SubsTracker",
+        description: "订阅管理与到期提醒",
+        url: "https://substracker.neomungle.workers.dev",
+        icon: "https://imgbed-idk.pages.dev/file/favicon/1794884535880_substracker.svg",
+      },
     ],
   },
   {
@@ -329,6 +353,24 @@ const WEBSITE_SORTS: WebsiteSort[] = [
         description: "音乐流媒体服务器",
         url: "https://idkbunglle-navi.hf.space",
         icon: "https://imgbed-idk.pages.dev/file/favicons/1762659079944_idkbunglle-navi.hf.space.png",
+      },
+      {
+        title: "AssemblyAI-Hub-Docs",
+        description: "AssemblyAI-Hub 文档",
+        url: "https://assemblyai-hub-docs.pages.dev",
+        icon: "https://imgbed-idk.pages.dev/file/favicon/1794829690761_assemblyai-hub.svg",
+      },
+      {
+        title: "OmniMail-Docs",
+        description: "OmniMail 文档",
+        url: "https://omnimail-docs.pages.dev",
+        icon: "https://imgbed-idk.pages.dev/file/favicon/1794829699330_omnimail.svg",
+      },
+      {
+        title: "CloudPaste-Docs",
+        description: "CloudPaste 文档",
+        url: "https://cloudpaste-doc.pages.dev",
+        icon: "https://imgbed-idk.pages.dev/file/favicon/1794884531899_cloudpaste.svg",
       },
     ],
   },
