@@ -88,7 +88,7 @@ const WEBSITE_SORTS: WebsiteSort[] = [
       },
       {
         title: "API-Tracker",
-        description: "OpenAl API链路溯源，检测API中转",
+        description: "OpenAI API 链路溯源，检测 API 中转",
         url: "https://api-tracker.itvoyager.us",
       },
       {
@@ -188,7 +188,7 @@ const WEBSITE_SORTS: WebsiteSort[] = [
       },
       {
         title: "MusicTool",
-        description: "Navidrom歌单同步",
+        description: "Navidrome 歌单同步",
         url: "https://musictool-web-idk.onrender.com",
         icon: "https://imgbed-idk.pages.dev/file/favicons/1762659083327_musictool-web-idk.onrender.com.png",
       },
