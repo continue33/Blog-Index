@@ -12,7 +12,7 @@ Leo 的个人发布页 / 网站导航，收录我自建和部署的各类站点�
 
 基于 Vue 3 + vite-ssg 的静态导航页，自适应布局兼容桌面与移动端：
 
-- 星空连线背景（Canvas 2D 实时绘制，无外部依赖，随鼠标轻微视差），独立组件见 [continue33/UI](https://github.com/continue33/UI)
+- 星空连线背景（Canvas 2D 实时绘制，无外部依赖，随鼠标轻微视差），独立组件见 [continue33/Vibe-UI](https://github.com/continue33/Vibe-UI)
 - 站点抽屉：按分类展示，带站点预览图与搜索框
 - 欢迎标语随机轮换
 
