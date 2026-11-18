@@ -320,6 +320,12 @@ const WEBSITE_SORTS: WebsiteSort[] = [
         url: "https://resend-manager.qihaolouzhang.workers.dev",
         icon: "https://imgbed-idk.pages.dev/file/favicon/1794880914442_resend-manager.svg",
       },
+      {
+        title: "Google-Manager",
+        description: "Gmail 多账户邮件同步与管理",
+        url: "https://google-manager.trageek.com",
+        icon: "https://imgbed-idk.pages.dev/file/favicon/1794974040305_google-manager.svg",
+      },
     ],
   },
   {
