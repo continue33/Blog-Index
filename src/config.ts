@@ -93,6 +93,12 @@ const WEBSITE_SORTS: WebsiteSort[] = [
         icon: "https://imgbed-idk.pages.dev/file/favicons/1762659079640_done-hub-idk.onrender.com.ico",
       },
       {
+        title: "New-API",
+        description: "AI 接口统一网关与管理后台",
+        url: "https://new-api.trageek.com",
+        icon: "https://imgbed-idk.pages.dev/file/favicon/1794972064662_1794971925848_new-api.ico",
+      },
+      {
         title: "API-Tracker",
         description: "OpenAI API 链路溯源，检测 API 中转",
         url: "https://api-tracker.itvoyager.us",
@@ -448,7 +454,7 @@ const GLOBAL_CONFIG = {
   /**
    * 个人 Github 链接
    */
-  GITHUB_URL: "https://github.com/idkbungle",
+  GITHUB_URL: "https://github.com/continue33",
   /**
    * ICP 备案号，留空不显示
    */
