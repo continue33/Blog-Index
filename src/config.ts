@@ -99,6 +99,11 @@ const WEBSITE_SORTS: WebsiteSort[] = [
         icon: "https://imgbed-idk.pages.dev/file/favicon/1794972064662_1794971925848_new-api.ico",
       },
       {
+        title: "CPA",
+        description: "CLI Proxy API 管理中心",
+        url: "https://cpa-idk.onrender.com/management.html",
+      },
+      {
         title: "API-Tracker",
         description: "OpenAI API 链路溯源，检测 API 中转",
         url: "https://api-tracker.itvoyager.us",
@@ -359,6 +364,12 @@ const WEBSITE_SORTS: WebsiteSort[] = [
         description: "跨平台的影视聚合播放器",
         url: "https://moontv-idk.onrender.com",
         icon: "https://imgbed-idk.pages.dev/file/favicons/1762659082408_moontv-idk.onrender.com.png",
+      },
+      {
+        title: "LibreTV",
+        description: "免费在线视频搜索与观看平台",
+        url: "https://libretv-idk.onrender.com",
+        icon: "https://imgbed-idk.pages.dev/file/favicon/1795079443137_libretv.png",
       },
       {
         title: "Navidrome",
